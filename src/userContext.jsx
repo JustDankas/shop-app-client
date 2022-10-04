@@ -19,7 +19,7 @@ export function UserProvider({children}){
 
     useEffect(()=>{
         if(user){
-            axios.get(`${process.env.API_URL}/${user.username}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/${user.username}`)
             .then(res=>{
                 console.log(res.data)
                 setCart(res.data.cart)
