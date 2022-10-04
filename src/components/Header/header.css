@@ -1,0 +1,235 @@
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+.responsive-flex{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (max-width:1080px) {
+    header{
+        height: 11vh;
+        padding-top: 1rem;
+    }
+    .responsive-flex{
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.user-auth-c{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #393e46;
+}
+
+.header-auth{
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link{
+    text-decoration: none;
+}
+.logo{
+    font-size: 4rem;
+    color: #f96d00;
+    font-weight: bold;
+}
+
+.profile-img-c{
+    position: relative;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.198);
+}
+
+.user-icon{
+    width: 100%;
+    height: 100%;
+    color: #f96d00;
+}
+.user-header-c{
+    display: flex;
+    align-items: center;
+}
+
+.drop-box-c{
+    position: absolute;
+    width: 20rem;
+    transform: translate(-12.5rem,2rem);
+    z-index: 100;
+}
+
+.triangle{
+    position: absolute;
+    top: -7.5px;
+    right: 23%;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-top: 1px solid  rgba(0, 0, 0, 0.181);
+    border-left: 1px solid  rgba(0, 0, 0, 0.181);
+    transform: rotateZ(45deg);
+}
+
+.drop-box{
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.181);
+}
+
+.dropbox-link{
+    text-decoration: none;
+
+}
+.dropbox-li{
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #fff;
+    font-size: 1.5rem;
+
+    color: black;
+}
+.dropbox-li:hover{
+    background-color: #f9f9f9;
+}
+
+.logout-btn{
+
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 0;
+    padding: .5rem 0;
+    background-color: #fff;
+    cursor: pointer;
+    border-top: 1px solid rgba(0, 0, 0, 0.133);
+    /* height: 100%;
+    padding: 1rem 0;
+    background-color: red;
+    cursor: pointer;
+    font-size: 1.5rem; */
+}
+.menu-btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+@keyframes burger-flip{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.burger-menu{
+    font-size: 2.5rem;
+}
+.burger-menu:hover{
+    animation-name: burger-flip;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-slide{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.mobile-nav{
+    width: 45%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    z-index: 100;
+    top: 0;
+    left: -10%;
+    overflow: hidden;
+    animation-name: nav-slide;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    border-radius: 25px;
+    
+    
+}
+
+
+
+.nav-option-link{
+    width: 100%;
+    padding: 2rem;
+    padding-left: 30%;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.142);
+}
+
+@media screen and (max-width:685px) {
+    .mobile-nav{
+        border-radius: 0;
+        left: 0;
+        width: 100%;
+    }
+    .nav-option-link{
+        padding-left: 2rem;
+    }
+    .logo{
+        font-size: 3rem;
+    }
+}
+.nav-option-link:hover{
+    text-decoration: underline;
+}
+.nav-option-title{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.802);
+}
+.nav-option-div{
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.142);
+    justify-content: flex-end;
+}
+.close-menu-btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translateX(-4rem);
+}
+.close-icon{
+    font-size: 2.5rem;
+}

@@ -1,0 +1,42 @@
+.page-index-buttons{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+.page-index-buttons > *:hover{
+    background-color: rgba(255, 255, 255, 0.861);
+}
+
+.page-index-btn,.page-index-btn-prev,.page-index-btn-next{
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    color: black;
+    border: none;
+    border-radius: 1%;
+    cursor: pointer;
+    border-radius: 15%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-active{
+    color: #008ed5;
+    font-weight: bold;
+}
+.page-index-btn:hover{
+    
+}
+
+.page-index-btn-prev{
+    border-radius: 0%;
+    margin-right: .5rem;
+}
+
+.page-index-btn-next{
+    border-radius: 0%;
+    margin-left: .5rem;
+    
+}

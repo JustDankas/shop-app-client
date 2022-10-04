@@ -1,0 +1,234 @@
+
+.filters-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-c{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.041);
+    
+}
+.filter-option{
+    margin: 0;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.filter-option-label{
+    margin-left: 1rem;
+}
+.filter-option:first-child{
+    margin-top: 1.5rem;
+}
+.filter-option:hover > :first-child{
+    color: #0962ea;
+}
+
+.filter-c label{
+    font-size: 1.4rem;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: .2rem;
+    margin-left: .8rem;
+}
+
+.filter-heading{
+    font-size: 2rem;
+}
+
+@keyframes pop {
+    0% { opacity:0;
+        transform: scale(.3); }
+    75% {opacity:1;
+        transform: scale(1.2);  }
+    100% { transform: scale(1.0); }
+  }
+
+.checkbox-pop,.radiobox-pop{
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+}
+
+.checkbox-span,.radiobox-span{
+    display: block;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgb(244, 244, 244);
+}
+
+.radiobox-span{
+    border-radius: 50%;
+}
+
+.filter-option:hover > :last-child{
+    background-color: #fff;
+}
+.checkbox-pop:checked ~ .checkbox-span{
+
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: rgb(34, 91, 248);
+    border: none;
+    animation-name: pop;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+
+    cursor: pointer;
+}
+.radiobox-pop:checked ~ .radiobox-span{
+    width: 1.55rem;
+    height: 1.55rem;
+    background-color: rgb(34, 91, 248);
+
+    animation-name: pop;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-filter-c label{
+    font-size: 1.9rem;
+}
+
+.price-filters{
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+.price-low,.price-high{
+    width: 9rem;
+    height: 2.5rem;
+    margin-right: .5rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.413);
+    padding-left: 1rem;
+    color: rgba(0, 0, 0, 0.702);
+    background-color: #efefef;
+}
+.price-low:focus{
+    background-color: #fff;
+}
+.price-high:focus{
+    background-color: #fff;
+}
+.price-submit-btn{
+    height: 2.75rem;
+    width: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.413);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.apply-filters-btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: .8rem 2rem;
+    font-size: 1.5rem;
+    background-color: #f96d00;
+    border-radius: 3px;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.filters-btn{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    outline: none;
+    background-color: #0962ea;
+    border: none;
+    font-size: 4rem;
+    color: #fff;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 50;
+}
+
+@keyframes filter-slide-forward{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes filter-slide-backwards{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.mobile-filters{
+    position: fixed;
+    top: 0;
+    left: -10%;
+    overflow: hidden;
+    height: 100%;
+    padding: 2rem;
+    padding-left: calc(10% + 2rem);
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 25px;
+
+    animation-name: filter-slide-forward;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.hidden{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 2rem;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 25px;
+    animation-name: filter-slide-backwards;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@media screen and (max-width:900px) {
+    .mobile-filters,.hidden{
+        width: 100%;
+    }
+    .filters-btn{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}

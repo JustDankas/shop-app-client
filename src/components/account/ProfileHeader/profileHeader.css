@@ -1,0 +1,77 @@
+.profile-header{
+    height: 10rem;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #efefef;
+    font-size: 2rem;
+}
+.profile-info-c{
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic{
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1px 14px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+}
+.profile-icon{
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid rgba(0, 0, 0, 0.114);
+    background-color: #fff;
+    border-radius: 50%;
+    color: #f96d00;
+    box-shadow: 0 0 1px 7px #fff;
+}
+
+.profile-name{
+    font-weight: bold;
+}
+
+.profile-meta-c{
+    display: flex;
+    align-items: center;
+}
+.profile-meta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    font-weight: bold;
+    border-right: 1px solid rgba(0, 0, 0, 0.164);
+    
+    padding: 0 3rem;
+}
+.profile-meta a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: .5rem;
+}
+
+.meta-icon{
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.38);
+    transition: color .2s ease;
+}
+.meta-title{
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: normal;
+    font-size: 1.7rem;
+
+}
+
+.meta-fav:hover{
+    color: red;
+}
+.meta-review:hover{
+    color: #f96d00;
+}

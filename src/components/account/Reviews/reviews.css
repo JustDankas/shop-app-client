@@ -1,0 +1,55 @@
+.review-c{
+    width: 90%;
+}
+.review-product-img-c{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.review-product-img-c img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.review-user-info{
+    width: 85%;
+    overflow: hidden;
+}
+
+.review-user-info a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.missing-reviews-c{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.missing-reviews-c h2{
+    font-size: 2rem;
+}
+.missing-reviews-icon{
+    font-size: 5rem;
+    margin-left: 1rem;
+}
+@media screen and (max-width:600px) {
+    .review-user-info{
+        width: 70%;
+    }
+    .review-user-info a{
+        color: black;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .review-product-img-c{
+        width: 7rem;
+        height: 7rem;
+    }
+}

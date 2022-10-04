@@ -1,0 +1,68 @@
+.my-account{
+    min-height: calc(100vh - 5vh - 8vh - 16rem);
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+}
+.my-account-c{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.profile-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2rem;
+    
+}
+.nav-option{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding-right: 10rem;
+}
+.nav-btn{
+    
+    color: #0000008e;
+    font-size: 2rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    
+}
+.nav-btn:hover{
+    color: rgb(0, 0, 0);
+    
+}
+
+.profile-nav-icon{
+    font-size: 2rem;
+}
+.profile-body{
+    width: 1260px;
+}
+@media screen and (max-width:1580px) {
+    .profile-body{
+        width: 1000px;
+    }
+}
+@media screen and (max-width:1280px) {
+    .profile-body{
+        width: 700px;
+    }
+}
+@media screen and (max-width:1080px) {
+    .profile-body{
+        width: 100%;
+    }
+}
+
+.nav-active{
+    color: black;
+    font-weight: bold;
+}

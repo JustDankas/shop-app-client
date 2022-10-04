@@ -1,0 +1,38 @@
+.stars-c{  
+    margin: 0;
+    padding: 0;
+}
+.stars-outer{
+    position: relative;
+
+    align-items: center;
+    color: #cecece;
+    overflow: hidden;
+    width: max-content;
+}
+
+
+.stars-inner{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 100%;
+    color: #f96d00;
+}
+
+.sm{
+    font-size: 1.4rem;
+}
+.med{
+    font-size: 2rem;
+}
+.lg{
+    font-size: 4rem;
+}
+.xlg{
+    font-size: 8rem;
+}

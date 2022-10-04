@@ -1,0 +1,13 @@
+.favourites-list{
+    width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.missing-favs-heading{
+    font-size: 2rem;
+}

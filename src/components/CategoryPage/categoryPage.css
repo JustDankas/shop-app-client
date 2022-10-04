@@ -1,0 +1,118 @@
+.category-page-c{
+    min-height: calc(100vh - 5vh - 8vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-body-c{
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    /* width: 70%; */
+}
+
+.filters-c{
+    width: 20%;
+    margin-right: 1rem;
+    
+}
+
+.category-products-c{
+    background-color: transparent;
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media screen and (max-width:1580px) {
+    .category-products-c{
+        width: 100%;
+    }
+    .filters-c{
+        width: 0;
+    }
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.sort-select-box-c{
+
+    width: 14rem;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+.sort-choice-c{
+    position: relative;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.237);
+    color: rgb(107, 107, 107);
+}
+
+.sort-options-list{
+    margin: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    width: 99%;
+    left: 0;
+    top: -2.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.237);
+    padding-top: 1rem;
+    z-index: 1000;
+}
+
+.sort-option-btn{
+    margin: 0;
+    position: relative;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding-bottom: 2rem;
+
+}
+
+.sort-radio{
+    display: none;
+}
+.sort-label{
+    font-size: 1.7rem;
+    margin-left: 2.4rem;
+    color: rgb(107, 107, 107);
+    cursor: pointer;
+}
+.sort-label:hover{
+    color: #0092ca;
+}
+.sortbox-icon{
+    position: absolute;
+    font-size: 2rem;
+    right: 1rem;
+}
+.products-center-list{
+
+    background-color: red;
+}

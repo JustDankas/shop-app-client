@@ -1,0 +1,14 @@
+.custom-textarea{
+    outline: none;
+    font-size: 1.4rem;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.189);
+    padding: .5rem;
+}
+
+.mt2{
+    margin-top: 2rem;
+}
+.w-100{
+    width: 100%;
+}

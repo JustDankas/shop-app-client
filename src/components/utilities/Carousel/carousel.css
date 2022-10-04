@@ -1,0 +1,235 @@
+.carousel-c{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.carousel{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+}
+.inner{
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out;
+    height: 290px;
+    /* height: 50vh; */
+    width: 100%;
+    background-color: transparent;
+    
+}
+
+.carousel-item{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(180deg,#113f67,#113f67); */
+    /* width: 30%; */
+    height: 100%;
+    /* margin: 0 .5%; */
+    border-radius: 5px;
+}
+.items-c-1{
+    width: 98%;
+    margin: 0 1%;
+}
+.items-c-2{
+    width: 49%;
+    margin: 0 .5%;
+}
+.items-c-3{
+    width: 32%;
+    margin: 0 .7%;
+}
+.items-c-4{
+    width: 24%;
+    margin: 0 .5%;
+}
+.items-c-5{
+    width: 19%;
+    margin: 0 .5%;
+}
+
+@keyframes loading-image{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.left-arrow,.right-arrow{
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: rgba(0, 0, 0, 0.318);
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all .2s;
+}
+.right-arrow:hover{
+    background-color: rgba(0, 0, 0, 0.461);
+}
+.left-arrow:hover{
+    background-color: rgba(0, 0, 0, 0.461);
+}
+
+/* Product stuff */
+
+.carousel-product-c{
+    width: 250px;
+    height: 280px;
+    margin: 1rem 0;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    overflow: hidden;
+    border-radius: .5rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    padding: 0 1.5rem;
+}
+.carousel-product-img-c{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+}
+.carousel-product-image{
+    height: 100%;
+    width: 90%;
+    object-fit: contain;
+    background-color: #fff;
+    /* margin-bottom: 1rem; */
+}
+
+.carousel-product-info{
+    height: 45%;
+    font-size: 2rem;
+    /* margin-left: 1.5rem; */
+    /* margin-bottom: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.carousel-product-title{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-overflow: ellipsis;
+}
+.carousel-product-title:hover{
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+}
+
+.carousel-product-price{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+
+.carousel-product-price span{
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+.carousel-product-rating{
+    display: flex;
+    align-items: center;
+}
+.carousel-product-rating-count{
+    font-size: 1.5rem;
+    margin-bottom: .4rem;
+    margin-left: .5rem;
+}
+
+
+/* Product stuff */
+/* 
+
+@media screen and (max-width:1760px) {
+    .carousel{
+        width: 960px;
+    }
+    .carousel-item,.title-popup-c{
+        width: 24%;
+    }
+    .inner{
+        height: 420px;
+    }
+
+}
+
+@media screen and (max-width:1420px) {
+    .carousel{
+        width: 800px;
+    }
+    .carousel-item,.title-popup-c{
+        width: 32.35%;
+    }
+    .inner{
+        height: 370px;
+    }
+}
+@media screen and (max-width:1110px) {
+    .carousel{
+        width: 640px;
+    }
+    .carousel-item{
+        width: 49%;
+    }
+    .title-popup-c{
+        width: 49%;
+    }
+
+    .inner{
+        height: 420px;
+    }
+
+    .left-arrow{
+        position: absolute;
+        left: 3%;
+        top: 45%;
+        z-index: 5;
+    }
+    .right-arrow{
+        position: absolute;
+        right: 3%;
+        top: 45%;
+    }
+}
+@media screen and (max-width:790px) {
+    .carousel{
+        width: 240px;
+    }
+    .carousel-item{
+        width: 99%;
+    }
+    .title-popup-c{
+        width: 99%;
+    }
+
+    .left-arrow{
+        position: absolute;
+        left: 2%;
+        top: 45%;
+        z-index: 5;
+    }
+    .right-arrow{
+        position: absolute;
+        right: 2%;
+        top: 45%;
+    }
+
+} */

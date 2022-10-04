@@ -1,0 +1,125 @@
+.cart-icon{
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.cart-btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-list-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    max-height: 440px;
+    position: absolute;
+    transform: translate(-80%,2rem);
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.307);
+    border-radius: .7rem;
+    z-index: 1000;
+}
+
+.cart-list{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;    
+}
+.cart-list h3{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+}
+.item-c{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+.item-img-c{
+    height: 100%;
+    width: 25%;
+}
+.item-img-c img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+.item-title{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2rem;
+}
+.item-title:hover{
+    text-decoration: underline;
+}
+
+.cart-remove-btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(152, 152, 152);
+}
+
+.checkout-link{
+    font-size: 2rem;
+    background-color: #87d04c;
+    padding: 1rem 6rem;
+    border-radius: .5rem;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.checkout-link:hover{
+    background-color: #6eb038;
+}
+
+.cart-center-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.113);
+
+}
+
+.ghost-icon{
+    font-size: 4rem;
+}
+
+.items-count-circle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: -.3rem;
+    right: 2rem;
+    background-color: #f96d00;
+    color: #fff;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+
+}

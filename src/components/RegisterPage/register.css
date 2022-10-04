@@ -1,0 +1,34 @@
+@keyframes message-popup{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 45%;
+    }
+}
+
+.warning{
+    outline: none;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2910a;
+    border-radius: 5px;
+    padding: 2rem 5rem;
+    color: #fff;
+    z-index: 100;
+    animation-name: message-popup;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.warning-icon{
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1rem;
+}
