@@ -22,7 +22,7 @@ function App() {
     if(userInfo){
       userInfo = JSON.parse(userInfo)
       setFetching(true)
-      axios.post(`${process.env.API_URL}/auth/auto/login`,{
+      axios.post(`${process.env.REACT_APP_API_URL}/auth/auto/login`,{
         token:userInfo.token
       }).then(res=>{
         const userData = res?.data?.data

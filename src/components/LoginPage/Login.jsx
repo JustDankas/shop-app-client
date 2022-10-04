@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import { useState } from 'react';
 import './login.css';
-import LoginForm from './LoginForm';
-import RegisterForm from './RegisterForm';
-import {useSelector} from 'react-redux'; 
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import axios from 'axios';
 import { useContext } from 'react';
 import UserContext from '../../userContext';
@@ -35,7 +28,7 @@ function Login() {
     async function handleLoginSubmit(e){
         e.preventDefault()
 
-        await axios.post(`${process.env.API_URL}auth/login`,{
+        await axios.post(`${process.env.REACT_APP_API_URL}auth/login`,{
             username,
             // email,
             password,
@@ -86,15 +79,3 @@ function Login() {
 }
 
 export default Login;
-
-
-{/* <div className="auth-c">
-                <div className="auth-btns">
-                    <button className="login-btn" onClick={()=>setLogin(true)}>Login</button>
-                    <button className="register-btn" onClick={()=>setLogin(false)}>Register</button>
-                </div>
-                
-                {login && <LoginForm/>}
-                
-                {!login && <RegisterForm/>}
-            </div> */}

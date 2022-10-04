@@ -39,7 +39,7 @@ function MyCart() {
 
     function RemoveFromCart(id){
         if(id && user){
-            axios.put(`${process.env.API_URL}/cart/${user.username}`,{
+            axios.put(`${process.env.REACT_APP_API_URL}/cart/${user.username}`,{
                 productId:id
             })
             .then(res=>{

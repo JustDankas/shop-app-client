@@ -41,7 +41,7 @@ function ProductsListing({data}) {
 
     useEffect(()=>{
         if(user){
-            axios.get(`${process.env.API_URL}/products/favs/get/${user.username}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/products/favs/get/${user.username}`)
             .then(res=>{
                 const favourites = res.data.favourites.map(f=>f._id)
                 setFavs(favourites)
@@ -60,7 +60,7 @@ function ProductsListing({data}) {
             const indx = favsArr.indexOf(id)
             console.log(indx)
             if(indx>=0){
-                axios.put(`${process.env.API_URL}/products/fav/remove/${user.username}`,{
+                axios.put(`${process.env.REACT_APP_API_URL}/products/fav/remove/${user.username}`,{
                     id
                 })
                 .then(res=>{
@@ -70,7 +70,7 @@ function ProductsListing({data}) {
                 .catch(e=>console.log(e))
                 
             }else{
-                axios.put(`${process.env.API_URL}/products/fav/add/${user.username}`,{
+                axios.put(`${process.env.REACT_APP_API_URL}/products/fav/add/${user.username}`,{
                     id
                 })
                 .then(res=>{

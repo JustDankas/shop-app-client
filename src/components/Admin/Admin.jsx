@@ -117,7 +117,7 @@ function Admin() {
 
 
     function FetchData(){
-        fetch('${process.env.API_URL}/admin').then(
+        fetch(`${process.env.REACT_APP_API_URL}/admin`).then(
             res=> res.json()
           ).then(
             data => {
@@ -125,7 +125,7 @@ function Admin() {
                 
             }
           )
-        fetch('${process.env.API_URL}/admin/categories').then(
+        fetch(`${process.env.REACT_APP_API_URL}/admin/categories`).then(
             res=> res.json()
           ).then(
             data => {
@@ -155,7 +155,7 @@ function Admin() {
         })
         setProductFilters(filters)
         console.log('filters',filters)
-        fetch(`${process.env.API_URL}/category/${product.categories}`).then(
+        fetch(`${process.env.REACT_APP_API_URL}/category/${product.categories}`).then(
             res=>res.json()
         ).then(
             data=>{
@@ -170,7 +170,7 @@ function Admin() {
     }
 
     function handleFillCategoryInfo(category){
-        fetch(`${process.env.API_URL}/category/${category}`).then(
+        fetch(`${process.env.REACT_APP_API_URL}/category/${category}`).then(
             res=>res.json()
         ).then(
             data=>{
@@ -193,7 +193,7 @@ function Admin() {
             headers:{'Content-Type':"application/json"},
             body:JSON.stringify({})
           }
-          fetch(`${process.env.API_URL}/admin/product/delete/${id}`,requestOptions).then(
+          fetch(`${process.env.REACT_APP_API_URL}/admin/product/delete/${id}`,requestOptions).then(
             res=> res.json()
           ).then(
             data => {
@@ -228,7 +228,7 @@ function Admin() {
           })
           }
           
-          fetch(`${process.env.API_URL}/admin/product/${actionType=='add'?"new":`update/${productId}`}`,requestOptions).then(
+          fetch(`${process.env.REACT_APP_API_URL}/admin/product/${actionType=='add'?"new":`update/${productId}`}`,requestOptions).then(
             res=> res.json()
           ).then(
             data => {
@@ -256,7 +256,7 @@ function Admin() {
                 filters: filtersArray
           })
           }
-          fetch(`${process.env.API_URL}/admin/category/${actionType=='add'?"new":`update/${valuesArr[0].value}`}`,requestOptions).then(
+          fetch(`${process.env.REACT_APP_API_URL}/admin/category/${actionType=='add'?"new":`update/${valuesArr[0].value}`}`,requestOptions).then(
             res=> res.json()
           ).then(
             data => {
@@ -301,7 +301,7 @@ function Admin() {
     }
 
     function handleUpdateProductCategory(category){
-        fetch(`${process.env.API_URL}/category/${category}`).then(
+        fetch(`${process.env.REACT_APP_API_URL}/category/${category}`).then(
             res=>res.json()
         ).then(
             data=>{
@@ -321,7 +321,7 @@ function Admin() {
 
     function handleDeleteCategory(name){
         if(name){
-            axios.delete(`${process.env.API_URL}/admin/category/delete/${name}`,{})
+            axios.delete(`${process.env.REACT_APP_API_URL}/admin/category/delete/${name}`,{})
             .then(res=>{
                 console.log(res)
             })

@@ -16,7 +16,7 @@ function SearchPage() {
     useEffect(()=>{
         const searchTerm = searchParams.get('keyphrase')
         if(searchTerm){
-            axios.post(`${process.env.API_URL}/products/search/${searchTerm}`,{})
+            axios.post(`${process.env.REACT_APP_API_URL}/products/search/${searchTerm}`,{})
             .then(res=>{
                 const categoryData = res.data.categories
                 const productsData = res.data.products

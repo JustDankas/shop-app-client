@@ -28,7 +28,7 @@ function Reviews() {
 
     useEffect(()=>{
         if(user){
-            axios.get(`${process.env.API_URL}/products/reviews/user/${user.username}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/products/reviews/user/${user.username}`)
             .then(res=>{
                 setReviews(res.data.reviews)
             })

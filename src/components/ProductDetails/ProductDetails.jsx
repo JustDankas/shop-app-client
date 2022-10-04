@@ -24,7 +24,7 @@ function ProductDetails() {
     const [existingReview,setExistingReview] = useState(null)
 
     useEffect(()=>{
-        axios.get(`${process.env.API_URL}/products/product/${productId}`).then(
+        axios.get(`${process.env.REACT_APP_API_URL}/products/product/${productId}`).then(
             data=>{
                 console.log(data)
                 setDetailsData(data?.data)
@@ -56,7 +56,7 @@ function ProductDetails() {
             if(items.length>15){
                 items.pop()
             }
-            axios.put(`${process.env.API_URL}/products/recent-product`,{
+            axios.put(`${process.env.REACT_APP_API_URL}/products/recent-product`,{
                 items,
                 username:user.username
             })
@@ -73,7 +73,7 @@ function ProductDetails() {
     function SubmitReview(e){
         console.log(e)
         e.preventDefault();
-        axios.post(`${process.env.API_URL}/products/product/review/${productId}`,{
+        axios.post(`${process.env.REACT_APP_API_URL}/products/product/review/${productId}`,{
             body:reviewBody,
             username:user?.username,
             rating:reviewRating
@@ -85,7 +85,7 @@ function ProductDetails() {
     }
 
     function DeleteReview(id){
-        axios.delete(`${process.env.API_URL}/products/reviews/${id}`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/products/reviews/${id}`)
         .then(res=>{
             window.location.reload(false)
         })
@@ -96,7 +96,7 @@ function ProductDetails() {
 
     function AddToCart(id){
         if(user && id){
-            axios.post(`${process.env.API_URL}/cart/${user.username}`,{
+            axios.post(`${process.env.REACT_APP_API_URL}/cart/${user.username}`,{
                 productId:id
             })
             .then(res=>{

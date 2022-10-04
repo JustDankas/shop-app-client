@@ -24,7 +24,7 @@ function Register() {
     function handleRegisterSubmit(e){
         e.preventDefault()
 
-        axios.post(`${process.env.API_URL}/auth/register`,{
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/register`,{
             username,
             email,
             password,

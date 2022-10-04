@@ -35,7 +35,7 @@ function CategoryPage({isLogged}) {
     },[])
     
     useEffect(()=>{
-        fetch(`${process.env.API_URL}/products/${catName.toLowerCase()}?sortBy=${sortBy}`).then(
+        fetch(`${process.env.REACT_APP_API_URL}/products/${catName.toLowerCase()}?sortBy=${sortBy}`).then(
             res=>res.json()
         ).then(
             data=>{
@@ -68,7 +68,7 @@ function CategoryPage({isLogged}) {
     },[sortBy,activeFilters])
 
     useEffect(()=>{
-        fetch(`${process.env.API_URL}/category/${catName.toLowerCase()}`).then(
+        fetch(`${process.env.REACT_APP_API_URL}/category/${catName.toLowerCase()}`).then(
             res=>res.json()
         ).then(
             data=>{

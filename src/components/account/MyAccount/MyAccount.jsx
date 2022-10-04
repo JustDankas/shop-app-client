@@ -36,7 +36,7 @@ function MyAccount() {
 
     useEffect(()=>{
         if(user){
-            axios.get(`${process.env.API_URL}/products/favs/get/${user.username}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/products/favs/get/${user.username}`)
             .then(res=>{
                 setFavs(res.data.favourites)
             })
