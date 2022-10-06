@@ -43,7 +43,7 @@ function Login() {
         localStorage.setItem("userInfo", JSON.stringify(res?.data?.data));
         login(res?.data?.data.user);
         setFetching(false);
-        navigate(`${process.env.REACT_APP_PORT}/`);
+        navigate(`/`);
       })
       .catch((e) => {
         console.log(e);
@@ -91,10 +91,7 @@ function Login() {
             Login
           </button>
           <span className="meta-span">
-            New user?{" "}
-            <Link to={`${process.env.REACT_APP_PORT}/auth/register`}>
-              Create an account here!
-            </Link>
+            New user? <Link to={`/auth/register`}>Create an account here!</Link>
           </span>
         </form>
       </div>

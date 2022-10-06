@@ -31,9 +31,7 @@ function SearchPage() {
 
           if (categoryData) {
             if (categoryData.length == 1) {
-              navigate(
-                `${process.env.REACT_APP_PORT}/categories/${categoryData[0].name}`
-              );
+              navigate(`/categories/${categoryData[0].name}`);
             } else {
               console.log(categoryData);
               setCategories(categoryData);
@@ -55,15 +53,13 @@ function SearchPage() {
               }
             });
             if (maxCat.category !== "") {
-              navigate(
-                `${process.env.REACT_APP_PORT}/categories/${maxCat.category}`
-              );
+              navigate(`/categories/${maxCat.category}`);
             } else {
-              navigate(`${process.env.REACT_APP_PORT}/nothing`);
+              navigate(`/nothing`);
             }
           }
         })
-        .catch((e) => navigate(`${process.env.REACT_APP_PORT}/nothing`));
+        .catch((e) => navigate(`/nothing`));
     }
   }, [searchParams, location]);
 
@@ -77,10 +73,10 @@ function SearchPage() {
           <ul className="search-categories-list">
             {categories.map((c) => (
               <li className="search-category-c">
-                <Link to={`${process.env.REACT_APP_PORT}/categories/${c.name}`}>
+                <Link to={`/categories/${c.name}`}>
                   <img src={c.image} alt="" />
                 </Link>
-                <Link to={`${process.env.REACT_APP_PORT}/categories/${c.name}`}>
+                <Link to={`/categories/${c.name}`}>
                   <h4>{c.name[0].toUpperCase() + c.name.slice(1)}</h4>
                 </Link>
               </li>

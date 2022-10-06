@@ -56,7 +56,7 @@ function Reviews() {
                 </div>
                 <div className="review-user-info">
                   <Link
-                    to={`${process.env.REACT_APP_PORT}/products/${
+                    to={`/products/${
                       review.productId._id
                     }/${review.productId.title.replace(
                       new RegExp(/[\s\/]/, "gi"),

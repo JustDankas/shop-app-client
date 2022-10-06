@@ -28,17 +28,17 @@ function Header() {
   const [options, setOptions] = useState([
     {
       title: "My account",
-      link: `${process.env.REACT_APP_PORT}/account/my-account`,
+      link: `/account/my-account`,
       icon: <BsFillPersonFill className="nav-icon" />,
     },
     {
       title: "Favourite",
-      link: `${process.env.REACT_APP_PORT}/account/my-account/favourites`,
+      link: `/account/my-account/favourites`,
       icon: <AiFillHeart className="nav-icon" />,
     },
     {
       title: "Reviews",
-      link: `${process.env.REACT_APP_PORT}/account/my-account/reviews`,
+      link: `/account/my-account/reviews`,
       icon: <AiFillStar className="nav-icon" />,
     },
   ]);
@@ -97,7 +97,7 @@ function Header() {
           </button>
         )}
         <div className="responsive-flex">
-          <Link to={`${process.env.REACT_APP_PORT}/`} className="logo-link">
+          <Link to={`/`} className="logo-link">
             <h1 className="logo">skroutz</h1>
           </Link>
           <SearchBar />
@@ -105,17 +105,11 @@ function Header() {
 
         {!user && (
           <div className="user-auth-c">
-            <Link
-              to={`${process.env.REACT_APP_PORT}/auth/login`}
-              className="header-auth"
-            >
+            <Link to={`/auth/login`} className="header-auth">
               login
             </Link>
             /
-            <Link
-              to={`${process.env.REACT_APP_PORT}/auth/register`}
-              className="header-auth"
-            >
+            <Link to={`/auth/register`} className="header-auth">
               register
             </Link>
           </div>
@@ -136,10 +130,7 @@ function Header() {
                   <ul className="drop-box">
                     {renderOptions}
                     {user && user.isAdmin && (
-                      <Link
-                        className="dropbox-link"
-                        to={`${process.env.REACT_APP_PORT}/admin`}
-                      >
+                      <Link className="dropbox-link" to={`/admin`}>
                         <li className="dropbox-li">Admin</li>
                       </Link>
                     )}
@@ -174,20 +165,14 @@ function Header() {
               </div>
             </Link>
           ))}
-          <Link
-            className="nav-option-link"
-            to={`${process.env.REACT_APP_PORT}/account/my-account/cart`}
-          >
+          <Link className="nav-option-link" to={`/account/my-account/cart`}>
             <div className="nav-option-title">
               <BsFillCartFill className="nav-icon" />
               My Cart
             </div>
           </Link>
           {user.isAdmin && (
-            <Link
-              className="nav-option-link"
-              to={`${process.env.REACT_APP_PORT}/admin`}
-            >
+            <Link className="nav-option-link" to={`/admin`}>
               <div className="nav-option-title">
                 <MdAdminPanelSettings className="nav-icon" />
                 Admin

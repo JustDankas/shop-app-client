@@ -7,7 +7,7 @@ function NotFoundPage() {
       <h2>Oh oh!</h2>
       <h2 className="e404">#404</h2>
       <h2>Page Not Found!</h2>
-      <Link to={`${process.env.REACT_APP_PORT}/`}>Get me back to safety</Link>
+      <Link to={`/`}>Get me back to safety</Link>
     </div>
   );
 }

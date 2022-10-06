@@ -55,7 +55,7 @@ function MyAccount() {
   }, [user]);
 
   function handleNav(path) {
-    navigate(`${process.env.REACT_APP_PORT}/account/my-account${path}`);
+    navigate(`/account/my-account${path}`);
   }
 
   return (

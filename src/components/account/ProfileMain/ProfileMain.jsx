@@ -67,9 +67,7 @@ function ProfileMain() {
                   </div>
                   <div className="carousel-product-info">
                     <Link
-                      to={`${process.env.REACT_APP_PORT}/products/${
-                        product._id
-                      }/${product.title.replace(
+                      to={`/products/${product._id}/${product.title.replace(
                         new RegExp(/[\s\/]/, "gi"),
                         "-"
                       )}`}
@@ -79,9 +77,7 @@ function ProfileMain() {
                     </Link>
                     <div className="carousel-product-rating">
                       <Link
-                        to={`${process.env.REACT_APP_PORT}/products/${
-                          product._id
-                        }/${product.title.replace(
+                        to={`/products/${product._id}/${product.title.replace(
                           new RegExp(/[\s\/]/, "gi"),
                           "-"
                         )}`}
@@ -105,10 +101,7 @@ function ProfileMain() {
           <div className="carousel-headings">
             <h3>Favourites:</h3>
             {favs.length > 0 && (
-              <Link
-                className="more-link"
-                to={`${process.env.REACT_APP_PORT}/account/my-account/favourites`}
-              >
+              <Link className="more-link" to={`/account/my-account/favourites`}>
                 Check all favourites
               </Link>
             )}
@@ -127,9 +120,7 @@ function ProfileMain() {
                     </div>
                     <div className="carousel-product-info">
                       <Link
-                        to={`${process.env.REACT_APP_PORT}/products/${
-                          product._id
-                        }/${product.title.replace(
+                        to={`/products/${product._id}/${product.title.replace(
                           new RegExp(/[\s\/]/, "gi"),
                           "-"
                         )}`}
@@ -139,9 +130,7 @@ function ProfileMain() {
                       </Link>
                       <div className="carousel-product-rating">
                         <Link
-                          to={`${process.env.REACT_APP_PORT}/products/${
-                            product._id
-                          }/${product.title.replace(
+                          to={`/products/${product._id}/${product.title.replace(
                             new RegExp(/[\s\/]/, "gi"),
                             "-"
                           )}`}

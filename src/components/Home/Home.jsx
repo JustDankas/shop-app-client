@@ -42,9 +42,7 @@ function Home() {
             <li key={index} className="category-c">
               <Link
                 className="category-link"
-                to={`${
-                  process.env.REACT_APP_PORT
-                }/categories/${cat.name.toLowerCase()}`}
+                to={`/categories/${cat.name.toLowerCase()}`}
               >
                 <img
                   className="category-image"
@@ -66,9 +64,7 @@ function Home() {
                 <li key={index} className="carousel-category-c">
                   <Link
                     className="category-link"
-                    to={`${
-                      process.env.REACT_APP_PORT
-                    }/categories/${cat.name.toLowerCase()}`}
+                    to={`/categories/${cat.name.toLowerCase()}`}
                   >
                     <img
                       className="category-image"

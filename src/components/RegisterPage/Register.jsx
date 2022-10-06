@@ -32,7 +32,7 @@ function Register() {
       .then((res) => {
         localStorage.setItem("userInfo", JSON.stringify(res?.data?.data));
         login(res?.data?.data?.user);
-        navigate(`${process.env.REACT_APP_PORT}/`);
+        navigate(`/`);
       })
       .catch((e) => {
         console.log(e);
@@ -87,10 +87,7 @@ function Register() {
             Register
           </button>
           <span className="meta-span">
-            Already registered?{" "}
-            <Link to={`${process.env.REACT_APP_PORT}/auth/login`}>
-              Login here!
-            </Link>
+            Already registered? <Link to={`/auth/login`}>Login here!</Link>
           </span>
         </form>
       </div>

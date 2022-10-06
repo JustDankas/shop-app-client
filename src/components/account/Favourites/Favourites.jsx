@@ -78,18 +78,17 @@ function Favourites() {
               </div>
               <div className="product-info">
                 <Link
-                  to={`${process.env.REACT_APP_PORT}/products/${
-                    product._id
-                  }/${product.title.replace(new RegExp(/[\s\/]/, "gi"), "-")}`}
+                  to={`/products/${product._id}/${product.title.replace(
+                    new RegExp(/[\s\/]/, "gi"),
+                    "-"
+                  )}`}
                   className="product-title"
                 >
                   {product.title}
                 </Link>
                 <div className="product-rating">
                   <Link
-                    to={`${process.env.REACT_APP_PORT}/products/${
-                      product._id
-                    }/${product.title.replace(
+                    to={`/products/${product._id}/${product.title.replace(
                       new RegExp(/[\s\/]/, "gi"),
                       "-"
                     )}`}

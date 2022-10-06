@@ -83,7 +83,7 @@ function Cart() {
               {cartObj.map((item, index) => (
                 <li key={index} className="item-c">
                   <Link
-                    to={`${process.env.REACT_APP_PORT}/products/${
+                    to={`/products/${
                       item.product._id
                     }/${item.product.title.replace(
                       new RegExp(/[\s\/]/, "gi"),
@@ -95,7 +95,7 @@ function Cart() {
                   </Link>
                   <div className="item-info">
                     <Link
-                      to={`${process.env.REACT_APP_PORT}/products/${
+                      to={`/products/${
                         item.product._id
                       }/${item.product.title.replace(
                         new RegExp(/[\s\/]/, "gi"),
@@ -124,10 +124,7 @@ function Cart() {
           )}
 
           <div className="cart-center-div">
-            <Link
-              className="checkout-link"
-              to={`${process.env.REACT_APP_PORT}/account/my-account/cart`}
-            >
+            <Link className="checkout-link" to={`/account/my-account/cart`}>
               Checkout cart
             </Link>
           </div>

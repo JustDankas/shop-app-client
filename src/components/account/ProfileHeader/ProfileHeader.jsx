@@ -67,18 +67,14 @@ function ProfileHeader() {
       {innerWidth > 600 && (
         <div className="profile-meta-c">
           <div className="profile-meta">
-            <Link
-              to={`${process.env.REACT_APP_PORT}/account/my-account/favourites`}
-            >
+            <Link to={`/account/my-account/favourites`}>
               <AiOutlineHeart className="meta-icon meta-fav" />
               <div className="meta-title">Favourites</div>
             </Link>
             {favs.length}
           </div>
           <div className="profile-meta">
-            <Link
-              to={`${process.env.REACT_APP_PORT}/account/my-account/reviews`}
-            >
+            <Link to={`/account/my-account/reviews`}>
               <AiOutlineStar className="meta-icon meta-review" />
               <div className="meta-title">Reviews</div>
             </Link>

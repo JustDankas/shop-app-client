@@ -691,7 +691,7 @@ function Admin() {
       )}
     </div>
   ) : (
-    <Navigate to={`${process.env.REACT_APP_PORT}/`} />
+    <Navigate to={`/`} />
   );
 }
 
