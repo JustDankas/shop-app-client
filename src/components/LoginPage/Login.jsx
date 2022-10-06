@@ -33,7 +33,7 @@ function Login() {
     e.preventDefault();
 
     await axios
-      .post(`${process.env.REACT_APP_API_URL}auth/login`, {
+      .post(`${process.env.REACT_APP_API_URL}/auth/login`, {
         username,
         // email,
         password,
