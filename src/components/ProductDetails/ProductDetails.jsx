@@ -83,7 +83,7 @@ function ProductDetails() {
         }
       )
       .then((res) => {
-        navigate(window.location.href);
+        window.location.href = window.location.href;
       })
       .catch((e) => {
         console.log(e);
@@ -94,7 +94,7 @@ function ProductDetails() {
     axios
       .delete(`${process.env.REACT_APP_API_URL}/products/reviews/${id}`)
       .then((res) => {
-        navigate(window.location.href);
+        window.location.href = window.location.href;
       })
       .catch((e) => {
         console.log(e);
