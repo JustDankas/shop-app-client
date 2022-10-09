@@ -71,8 +71,6 @@ function ProductDetails() {
   }, [user]);
 
   function SubmitReview(e) {
-    console.log(e);
-    e.preventDefault();
     axios
       .post(
         `${process.env.REACT_APP_API_URL}/products/product/review/${productId}`,
@@ -82,9 +80,7 @@ function ProductDetails() {
           rating: reviewRating,
         }
       )
-      .then((res) => {
-        window.location.reload(false);
-      })
+      .then((res) => {})
       .catch((e) => {
         console.log(e);
       });
@@ -94,7 +90,7 @@ function ProductDetails() {
     axios
       .delete(`${process.env.REACT_APP_API_URL}/products/reviews/${id}`)
       .then((res) => {
-        window.location.reload(false);
+        window.location.reload(true);
       })
       .catch((e) => {
         console.log(e);
@@ -113,7 +109,7 @@ function ProductDetails() {
         .catch((e) => console.log(e));
     }
   }
-
+  console.log(productId);
   if (detailsData == null) return <LoadingPage />;
   return (
     <div className="product-details-page">
