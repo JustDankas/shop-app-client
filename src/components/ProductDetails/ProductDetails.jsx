@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import { AiOutlineUser, AiFillStar } from "react-icons/ai";
 import { RiDeleteBack2Line } from "react-icons/ri";
@@ -21,6 +21,7 @@ function ProductDetails() {
   const [reviewBody, setReviewBody] = useState("");
   const [reviewRating, setReviewRating] = useState(1);
   const [existingReview, setExistingReview] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -71,6 +72,7 @@ function ProductDetails() {
   }, [user]);
 
   function SubmitReview(e) {
+    e.preventDefault();
     axios
       .post(
         `${process.env.REACT_APP_API_URL}/products/product/review/${productId}`,
@@ -80,7 +82,9 @@ function ProductDetails() {
           rating: reviewRating,
         }
       )
-      .then((res) => {})
+      .then((res) => {
+        navigate(window.location.href);
+      })
       .catch((e) => {
         console.log(e);
       });
@@ -90,7 +94,7 @@ function ProductDetails() {
     axios
       .delete(`${process.env.REACT_APP_API_URL}/products/reviews/${id}`)
       .then((res) => {
-        window.location.reload(true);
+        navigate(window.location.href);
       })
       .catch((e) => {
         console.log(e);
