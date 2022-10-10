@@ -22,6 +22,17 @@ function ProductDetails() {
   const [reviewRating, setReviewRating] = useState(1);
   const [existingReview, setExistingReview] = useState(null);
   const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  function handleResize() {
+    setWindowWidth(window.innerWidth);
+  }
 
   useEffect(() => {
     axios
@@ -113,7 +124,7 @@ function ProductDetails() {
         .catch((e) => console.log(e));
     }
   }
-  console.log(productId);
+
   if (detailsData == null) return <LoadingPage />;
   return (
     <div className="product-details-page">
@@ -150,7 +161,10 @@ function ProductDetails() {
 
       <div className="reviews-c">
         <h2>User Reviews</h2>
-        <Stars className={"xlg"} rating={detailsData?.product?.rating} />
+        <Stars
+          className={windowWidth > 1280 ? "xlg" : "lg"}
+          rating={detailsData?.product?.rating}
+        />
         <ul className="reviews-list">
           {/* Add Review Form */}
           {user && existingReview === null && (

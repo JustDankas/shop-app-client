@@ -115,7 +115,7 @@ function Favourites() {
       )}
       {favs.length == 0 && (
         <h3 className="missing-favs-heading">
-          Explore our products and add them to your favourite wishlist!
+          Explore our products and add them to your wishlist! <AiFillHeart />
         </h3>
       )}
     </div>

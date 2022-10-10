@@ -75,11 +75,6 @@ function Header() {
     return () => window.removeEventListener("mousedown", windowClick);
   }, []);
 
-  function handleLogout() {
-    localStorage.removeItem("userInfo");
-    logout();
-  }
-
   useEffect(() => {
     setIsActive(false);
   }, [location]);
@@ -134,10 +129,7 @@ function Header() {
                         <li className="dropbox-li">Admin</li>
                       </Link>
                     )}
-                    <button
-                      className="logout-btn"
-                      onClick={() => handleLogout()}
-                    >
+                    <button className="logout-btn" onClick={() => logout()}>
                       <li className="dropbox-li btn-li">Logout</li>
                     </button>
                   </ul>
