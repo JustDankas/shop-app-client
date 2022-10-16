@@ -34,7 +34,9 @@ function ProductsListing({ data }) {
           )}`}
           className="product-title"
         >
-          {product.title}
+          {product.title.length > 100
+            ? product.title.slice(0, 100) + "..."
+            : product.title}
         </Link>
         <div className="product-rating">
           <Link

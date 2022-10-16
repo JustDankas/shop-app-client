@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import UserContext from "../../../userContext";
 import "./myCart.css";
 import { FaTrashAlt } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import axios from "axios";
 
 function MyCart() {
@@ -48,7 +49,6 @@ function MyCart() {
     }
   }
 
-  console.log(cartObj);
   if (!user) return;
   return (
     <div className="my-cart">
@@ -77,7 +77,7 @@ function MyCart() {
               </Link>
               <div className="product-price-info">
                 <div className="my-cart-item-count">{item.count}</div>
-                <div className="my-cart-item-price">{item.product.price}</div>
+                <div className="my-cart-item-price">{item.product.price}$</div>
               </div>
             </div>
             <button
@@ -89,13 +89,26 @@ function MyCart() {
           </li>
         ))}
       </ul>
-      <div className="total-price">
-        Total:{" "}
-        {cartObj.reduce((sum, item) => {
-          return sum + item.product.price;
-        }, 0)}{" "}
-        $
-      </div>
+      {cart.length > 0 && (
+        <div className="total-price">
+          Total:{" "}
+          {cartObj.reduce((sum, item) => {
+            return sum + item.product.price;
+          }, 0)}{" "}
+          $
+        </div>
+      )}
+      {cart.length == 0 && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            fontSize: "2.5rem",
+          }}
+        >
+          Cart is empty! <AiOutlineShoppingCart />
+        </div>
+      )}
     </div>
   );
 }

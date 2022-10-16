@@ -100,7 +100,7 @@ function ProfileMain() {
         <div className="profile-carousel">
           <div className="carousel-headings">
             <h3>Favourites:</h3>
-            {favs.length > 0 && (
+            {favs.length > 0 && innerWidth > 500 && (
               <Link className="more-link" to={`/account/my-account/favourites`}>
                 Check all favourites
               </Link>
