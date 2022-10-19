@@ -64,8 +64,8 @@ function Cart() {
         .catch((e) => console.log(e));
     }
   }
-
-  if (!user) return;
+  console.log("cart", cart);
+  if (!user || !cart) return;
   return (
     <div className="cart-c">
       <button className="cart-btn" onClick={() => setActiveCart(!activeCart)}>

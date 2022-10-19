@@ -11,9 +11,12 @@ import { useState } from "react";
 import axios from "axios";
 import Carousel from "../utilities/Carousel/Carousel";
 import ItemCarousel from "../utilities/Carousel/ItemCarousel";
+import Tutorial from "../Tutorial/Tutorial";
 function Home() {
   const [categories, setCategories] = useState([]);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  const [showMsg, setShowMsg] = useState(true);
 
   useEffect(() => {
     axios
@@ -36,6 +39,7 @@ function Home() {
 
   return (
     <div className="home">
+      {showMsg && <Tutorial setShowMsg={() => setShowMsg(false)} />}
       {innerWidth > 1080 && (
         <ul className="categories-c">
           {categories.map((cat, index) => (

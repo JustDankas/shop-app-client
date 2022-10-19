@@ -93,7 +93,7 @@ function Header() {
         )}
         <div className="responsive-flex">
           <Link to={`/`} className="logo-link">
-            <h1 className="logo">skroutz</h1>
+            <h1 className="logo">mcduck</h1>
           </Link>
           <SearchBar />
         </div>

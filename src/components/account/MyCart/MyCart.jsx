@@ -49,7 +49,7 @@ function MyCart() {
     }
   }
 
-  if (!user) return;
+  if (!user || !cart) return;
   return (
     <div className="my-cart">
       <ul className="my-cart-list">

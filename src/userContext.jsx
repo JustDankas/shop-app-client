@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useContext, createContext } from "react";
+import { createContext } from "react";
 
 const UserContext = createContext();
 
@@ -20,7 +20,7 @@ export function UserProvider({ children }) {
   useEffect(() => {
     if (user) {
       axios
-        .get(`${process.env.REACT_APP_API_URL}/${user.username}`)
+        .get(`${process.env.REACT_APP_API_URL}/cart/${user.username}`)
         .then((res) => {
           console.log(res.data);
           setCart(res.data.cart);
@@ -45,7 +45,7 @@ export function UserProvider({ children }) {
     console.log(recent);
     setRecent(recent);
   };
-  console.log(user);
+  console.log("cart Context", cart);
   return (
     <UserContext.Provider
       value={{
