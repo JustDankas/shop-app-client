@@ -11,7 +11,7 @@ function Tutorial({ setShowMsg }) {
           <h3>Attention!</h3>
           <ul>
             <li>Render.com takes ~30 seconds to startup the backend</li>
-            <li>Please be patient! Nothing i can do.</li>
+            <li>Please be patient!</li>
             <li>
               You will know its up and running when theres 4 categories in the
               center

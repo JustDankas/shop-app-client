@@ -16,6 +16,8 @@ function Home() {
   const [categories, setCategories] = useState([]);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
+  const { user } = useContext(UserContext);
+
   const [showMsg, setShowMsg] = useState(true);
 
   useEffect(() => {
@@ -39,7 +41,7 @@ function Home() {
 
   return (
     <div className="home">
-      {showMsg && <Tutorial setShowMsg={() => setShowMsg(false)} />}
+      {showMsg && !user && <Tutorial setShowMsg={() => setShowMsg(false)} />}
       {innerWidth > 1080 && (
         <ul className="categories-c">
           {categories.map((cat, index) => (
